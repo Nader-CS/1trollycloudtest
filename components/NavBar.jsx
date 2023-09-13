@@ -9,13 +9,13 @@ import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavBar = () => {
-  const [isLogged, setIsLogged] = useState(true);
+  // const [isLogged, setIsLogged] = useState(false);
   const pathname = usePathname();
   // console.log(pathname);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [screenWidth, setScreenWidth] = useState(null);
-  
+
   useEffect(() => {
     if (pathname !== "/") {
       const selectedPathname = pathname.split("/")[1];
@@ -168,35 +168,35 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                {isLogged ? (
-                  <Link
-                    className={`nav-link text-black ${styles.underLine} ${
-                      selectedOption === "profile" ? "fw-bold" : ""
-                    }`}
-                    href="/profile"
-                    // onClick={() => setIsCollapsed(!isCollapsed)}
-                    onClick={() => handleOptionClick("profile")}
-                  >
-                    <FontAwesomeIcon icon={faCircleUser} fontSize={20} />
-                  </Link>
-                ) : (
-                  <Link
-                    className={`nav-link text-black ${styles.underLine} ${
-                      selectedOption === "signIn" ? "fw-bold" : ""
-                    }`}
-                    href="/signIn"
-                    // onClick={() => setIsCollapsed(!isCollapsed)}
-                    onClick={() => handleOptionClick("signIn")}
-                  >
-                    Sign In
-                    {/* <Image
+                <Link
+                  className={`nav-link text-black ${styles.underLine} ${
+                    selectedOption === "profile" ? "fw-bold" : ""
+                  }`}
+                  href="/profile"
+                  // onClick={() => setIsCollapsed(!isCollapsed)}
+                  onClick={() => handleOptionClick("profile")}
+                >
+                  <FontAwesomeIcon icon={faCircleUser} fontSize={20} />
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className={`nav-link text-black ${styles.underLine} ${
+                    selectedOption === "signIn" ? "fw-bold" : ""
+                  }`}
+                  href="/signIn"
+                  // onClick={() => setIsCollapsed(!isCollapsed)}
+                  onClick={() => handleOptionClick("signIn")}
+                >
+                  Sign In
+                  {/* <Image
                     src="/assets/images/user.png"
                     width={20}
                     height={20}
                     alt="profile"
                   /> */}
-                  </Link>
-                )}
+                </Link>
               </li>
             </ul>
           </div>
