@@ -129,25 +129,33 @@ const LazyLoadTable = (props) => {
                   <td>{editedData.company}</td>
                   <td>{editedData.vehicleType}</td> */}
                   {/* get headers name to access object */}
-                  {headers.map((header) => {
+                  {headers.map((header, idx) => {
                     if (header.toLowerCase() == "name") {
                       return (
-                        <td style={{ textAlign: "left", width: "5rem" }}>
+                        <td
+                          key={idx}
+                          style={{ textAlign: "left", width: "5rem" }}
+                        >
                           {editedData[header]}
                         </td>
                       );
                     } else if (header.toLowerCase() == "number") {
                       return (
-                        <td style={{ textAlign: "left", width: "3rem" }}>
+                        <td
+                          key={idx}
+                          style={{ textAlign: "left", width: "3rem" }}
+                        >
                           {editedData[header]}
                         </td>
                       );
                     } else if (header.toLowerCase() == "mobile") {
                       return (
-                        <td style={{ width: "7rem" }}>{editedData[header]}</td>
+                        <td key={idx} style={{ width: "7rem" }}>
+                          {editedData[header]}
+                        </td>
                       );
                     } else {
-                      return <td>{editedData[header]}</td>;
+                      return <td key={idx}>{editedData[header]}</td>;
                     }
                   })}
 
