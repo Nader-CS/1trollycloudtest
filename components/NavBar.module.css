@@ -1,0 +1,10 @@
+.bgNav{
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+.underLine {
+    text-decoration: none;
+  } 
+  .underLine:hover {
+    /* text-decoration: underline; */
+    color: #60A3C1 !important;
+  } 

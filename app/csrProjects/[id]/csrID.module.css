@@ -1,0 +1,9 @@
+/* For large screens */
+.mainPad {
+    padding-top: 200px;
+}
+
+
+@media (max-width: 991.98px) {
+  
+}

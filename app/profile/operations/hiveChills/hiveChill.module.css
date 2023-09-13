@@ -1,0 +1,17 @@
+.main {
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .header-container {
+    display: flex;
+    margin: 1.5rem 0.5rem 1rem 0.5rem;
+    justify-content: space-between;
+  }
+  .haeder-icon {
+    cursor: pointer;
+    width: 1rem;
+  }
+  

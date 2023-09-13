@@ -1,0 +1,32 @@
+.bgImage {
+    width: 60%;
+}
+
+
+@media (min-width: 1920px) {
+
+}
+/* For large screens */
+@media (max-width: 1199.98px) {
+
+}
+
+/* For medium screens */
+@media (max-width: 991.98px) {
+ 
+    .bgImage {
+        width: 50%;
+    }
+}
+
+/* For small screens */
+@media (max-width: 767.98px) {
+    .bgImage {
+        display: none;
+    }
+}
+
+/* For xs small screens */
+@media (max-width: 575.98px) {
+
+}

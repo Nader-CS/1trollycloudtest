@@ -1,0 +1,23 @@
+.container {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1rem;
+}
+@media screen and (min-width: 442px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 624px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 924px) {
+  .container {
+    width: 48%;
+    margin: 0;
+  }
+}

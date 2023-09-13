@@ -1,0 +1,32 @@
+.table {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 98%;
+  overflow-x: auto;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+}
+
+.table-header {
+  color: #777;
+}
+.table-header tr th {
+  font-weight: 600;
+}
+.red {
+  outline: 1px solid #f7e9e9;
+  border-radius: 4px;
+  background: #f7e9e9;
+}
+.green {
+  outline: 1px solid #f7e9e9;
+  border-radius: 4px;
+  background-color: #e9f7ea;
+}
+
+.normal {
+  outline: 1px solid #f7e9e9;
+  background: #f8f8f8;
+  border-radius: 4px;
+}

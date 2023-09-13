@@ -1,0 +1,84 @@
+.cardBox {
+  height: 100%;
+  box-shadow: 0px 3px 6px #ececec;
+  border-radius: 4px;
+  opacity: 1;
+  background-color: white;
+}
+
+.largeFont {
+  font-size: 2.5rem;
+}
+
+.mar {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.sideNav {
+  padding: 0 140px 0 140px;
+}
+
+.boldFirstWord::first-word {
+  font-weight: bold;
+}
+
+.hoverPartner:hover {
+  background-color: white;
+  box-shadow: 0px 3px 40px #b6bbbd29;
+  border-radius: 10px;
+}
+
+.selectedPartner {
+  background-color: white;
+  box-shadow: 0px 3px 40px #b6bbbd29;
+  border-radius: 10px;
+}
+
+.sideNavItems {
+  width: 15%;
+}
+@media (min-width: 1920px) {
+  .sideNav {
+    padding: 0 160px 0 160px;
+  }
+}
+
+/* For large screens */
+@media (max-width: 1199.98px) {
+  .sideNav {
+    padding: 0 110px 0 110px;
+  }
+}
+
+/* For medium screens */
+@media (max-width: 991.98px) {
+  .mar {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .sideNavItems {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* For small screens */
+@media (max-width: 767.98px) {
+  .sideNav {
+    padding: 0 25px 0 25px;
+  }
+}
+
+/* For xs small screens */
+@media (max-width: 575.98px) {
+  .mar {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .sideNav {
+    padding: 0 0px 0 0px;
+  }
+}
