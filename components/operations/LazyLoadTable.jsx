@@ -36,6 +36,7 @@ const LazyLoadTable = (props) => {
             There is no more data to load
           </div>
         }
+        scrollThreshold={0.7}
       >
         <table className={`${classes.table} table-sm`}>
           <thead className={`thead-light ${classes["table-header"]}`}>
