@@ -26,7 +26,7 @@ const DonutChart = ({ obj }) => {
   useEffect(() => {
     setColors(["#ADDEF4", "#60A3C1", "#143C4E", "#02131A"]);
     const Colored = obj?.percentage.map((item, index) => {
-      if (index < colors.length) {
+      if (index < colors?.length) {
         item.color = colors[index];
       }
       return item;
@@ -77,9 +77,19 @@ const DonutChart = ({ obj }) => {
           <div>
             {coloredPer.map((item, idx) => (
               <div key={idx} className="d-flex align-items-center gap-2 my-1">
-                <div className="rounded-4" style={{ backgroundColor: `${item.color}`,width:'20px',height:'13px'}}></div>
+                <div
+                  className="rounded-4"
+                  style={{
+                    backgroundColor: `${item.color}`,
+                    width: "20px",
+                    height: "13px",
+                  }}
+                ></div>
                 <p className="p-0 m-0">{item.per} %</p>
-                <p className="p-0 m-0">{item.perTitle.charAt(0).toUpperCase() + item.perTitle.slice(1)}</p>
+                <p className="p-0 m-0">
+                  {item.perTitle.charAt(0).toUpperCase() +
+                    item.perTitle.slice(1)}
+                </p>
               </div>
             ))}
           </div>
