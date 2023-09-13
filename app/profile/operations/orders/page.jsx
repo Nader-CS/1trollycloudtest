@@ -70,6 +70,7 @@ const OrdersPage = () => {
         data={data}
         hasMore={hasMore}
         fetchMoreData={fetchMoreData}
+        actions={[{ type: "edit" }]}
       />
     </div>
   );

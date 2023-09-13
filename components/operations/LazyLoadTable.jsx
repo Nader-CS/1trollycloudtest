@@ -159,7 +159,7 @@ const LazyLoadTable = (props) => {
                     }
                   })}
 
-                  {selectedPath === "orders" && (
+                  {/* {path === "/profile/operations/orders" && (
                     <td>
                       <FontAwesomeIcon icon={faPen} cursor="pointer" />
                     </td>
@@ -181,7 +181,29 @@ const LazyLoadTable = (props) => {
                         }}
                       />
                     </td>
-                  )}
+                  )} */}
+                  <td>
+                    {props.actions &&
+                      props.actions.map((action) => {
+                        if (action.type.toLowerCase() == "show") {
+                          return (
+                            <FontAwesomeIcon
+                              icon={faEye}
+                              cursor="pointer"
+                              style={{ marginRight: "0.8rem" }}
+                              onClick={() => {
+                                setIsDetailsShown(true);
+                                setSelectedData(item);
+                              }}
+                            />
+                          );
+                        } else if (action.type.toLowerCase() == "edit") {
+                          return (
+                            <FontAwesomeIcon icon={faPen} cursor="pointer" />
+                          );
+                        }
+                      })}
+                  </td>
                 </tr>
               );
             })}

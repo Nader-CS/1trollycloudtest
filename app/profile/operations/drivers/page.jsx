@@ -5,7 +5,6 @@ import LazyLoadTable from "@components/operations/LazyLoadTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 
-
 const DriversPage = () => {
   const tableHeaders = [
     "Name",
@@ -67,16 +66,14 @@ const DriversPage = () => {
     <div className={`${styles.main}`}>
       <div className={styles["header-container"]}>
         <h5 className={styles.header}>Drivers</h5>
-        <FontAwesomeIcon
-          className={styles["haeder-icon"]}
-          icon={faRotate}
-        />
+        <FontAwesomeIcon className={styles["haeder-icon"]} icon={faRotate} />
       </div>
       <LazyLoadTable
         tableHeaders={tableHeaders}
         data={data}
         hasMore={hasMore}
         fetchMoreData={fetchMoreData}
+        actions={[{ type: "show" }, { type: "edit" }]}
       />
     </div>
   );
