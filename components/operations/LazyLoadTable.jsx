@@ -184,10 +184,11 @@ const LazyLoadTable = (props) => {
                   )} */}
                   <td>
                     {props.actions &&
-                      props.actions.map((action) => {
+                      props.actions.map((action, idx) => {
                         if (action.type.toLowerCase() == "show") {
                           return (
                             <FontAwesomeIcon
+                              key={idx}
                               icon={faEye}
                               cursor="pointer"
                               style={{ marginRight: "0.8rem" }}
@@ -199,7 +200,11 @@ const LazyLoadTable = (props) => {
                           );
                         } else if (action.type.toLowerCase() == "edit") {
                           return (
-                            <FontAwesomeIcon icon={faPen} cursor="pointer" />
+                            <FontAwesomeIcon
+                              key={idx}
+                              icon={faPen}
+                              cursor="pointer"
+                            />
                           );
                         }
                       })}
